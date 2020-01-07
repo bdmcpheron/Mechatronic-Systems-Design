@@ -1,0 +1,255 @@
+\documentclass[12pt,letterpaper,onecolumn]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amstext}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{exscale}
+\usepackage[mathscr]{eucal}
+\usepackage{bm}
+\usepackage{eqlist}
+\usepackage[usenames, dvipsnames]{color}
+\DeclareGraphicsExtensions{.pdf, .jpg}
+\newcommand{\harpoon}{\overset{\rightharpoonup}}
+
+\usepackage{hyperref}
+\usepackage{esint}
+\usepackage{mathtools}
+\usepackage{colortbl}
+\usepackage{color}
+\usepackage[utf8]{inputenc}
+
+\usepackage[left=1in,right=1in,top=1in,bottom=1in]{geometry}
+
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%\fancyhf{}
+
+
+\begin{document}
+
+\begin{center}
+\LARGE{\textbf{ENGR 4020: Mechatronics System Design}}\\
+\end{center}
+
+\begin{center}
+\textbf{Instructor:} Benjamin D. McPheron, Ph.D.\\
+\textbf{Office:} Hartung 313a\\
+\textbf{Phone:} 765-641-4375 (O) 937-935-6873 (M)\\
+\textbf{Email:} bdmcpheron@anderson.edu\\
+\textbf{Office Hours:} 
+By Appointment and \\M-T-W 12PM-2PM \\R 1PM-3PM\end{center}
+
+\subsection*{Course Caption}
+Mechatronics is the multidisciplinary union of mechanical, electrical, and computer engineering.  This course employs knowledge from these disciplines to explore mechanics, electrical sensing, control, and actuation, and computer programming of mechatronic devices.  Students will design, build and program electromechanical devices to autonomously perform specific tasks.
+
+\subsection*{Required Resources}
+\begin{itemize}
+\item {MATLAB and Simulink Student Suite: \$99\\Required Add On: Robotics System Toolbox \\Optional Add on: Computer Vision Toolbox, useful for self study and extension}\item{AutoCAD Student Edition: Free}
+\item{kiCAD: Free}
+\end{itemize}
+
+\subsection*{Course Learning Outcomes}
+By the conclusion of this course, students will:
+\begin{enumerate}
+\item Design mechatronic systems to complete a specific task
+\item Implement real-time control to mechatronics systems
+\item Program a microcontroller to control a mechatronic system
+\item Communicate their work effectively in written lab documentation and project reports
+\item Work effectively as a team to design and implement a mechatronic system
+\item Complete and document laboratory experiments with mechatronic systems
+\item Be able to learn new software tools through self study
+\item Be able to read and interpret a datasheet
+\end{enumerate}
+
+\subsection*{Prerequisites}
+ENGR 2110, 3220, 3280
+
+\subsection*{Credit}
+4 Credit Lecture + Lab
+
+\subsection*{Time and Room}
+M-W-F, 2:00-3:00 PM, \textit{Lecture} Hartung 314\\
+TH, 3:00-4:50 PM, \textit{Lab} Hartung 314
+
+\subsection*{Attendance}
+Attendance will be taken by a sign in sheet. If you are going to miss class, please inform the instructor BEFORE class by email or phone. You are responsible for all materials presented in the class, whether or not you are present in lecture. A maximum of three (3) \underline{unexcused} absences are allowed for any and all reasons. No explanation is necessary for this absence. Unexcused absences above this number will affect the final course grade according to the following schedule.\\
+
+\noindent First two absences: No effect on final grade\\
+\noindent 1 more absence: Final grade lowered 1/2 letter grade\\
+\noindent 2 more absences: Final grade lowered 1 letter grade\\
+\noindent 3 more absences: Final grade of F assigned
+
+\subsection*{Assignment Policy}
+If an assignment is given, it will be due by 4 PM on its due date.  Late assignments will be penalized 20\% for each business day it is late.  Students will always complete assignments as a team, but the responsibility for editing and turning in will alternate between group members.  All grades will be shared by team members unless there are extenuating circumstances.
+
+\subsection*{Academic Integrity}
+As an institution of higher education committed to academic and Christian discovery, Anderson University expects faculty and students alike to maintain the highest standards of academic and personal integrity. “Anderson University seeks to support and promote qualities of academic honesty and personal integrity and regards cheating, plagiarism, and all other forms of academic dishonesty as serious offenses against the University community” (Faculty Handbook 4.23 Policy on Academic Integrity). See the \href{https://www.anderson.edu/students/policies/handbook}{student handbook} for examples of plagiarism.  Any detected Academic Integrity issues will result in a personal meeting with the instructor to determine if further corrective action is necessary, which may include failure of the assignment, failure of the course, and/or written notice of the infringement to the Provost which will be added to the student's permanent academic record.
+
+\subsection*{Graded Requirements}
+
+\begin{tabbing}
+\hspace{3in}\=\hspace{3in}\=\kill
+\textbf{\underline{Requirement}} \> \textbf{\underline{Point Value}} \\  
+Homework and Quizzes\>  100 \\ 
+Lab Assignments\> 200\\
+Project Milestones and Reports \>  400 \\ 
+Final Project Competition and Report \> 300\\ 
+\textbf{Total} \> 1000
+
+\end{tabbing}
+\subsection*{Grading Scale}
+\begin{tabbing}
+\hspace{3in}\=\kill
+\textbf{\underline{Average (\%)}} \> \textbf{\underline{Letter Grade}} \\  
+93.0 \> A \\ 
+90.0 \> A-\\
+87.0 \> B+\\
+83.0 \> B\\
+80.0 \> B-\\
+77.0 \> C+\\
+73.0 \> C\\
+68.0 \> C-\\
+65.0 \> D\\
+$<$ 65.0 \> F\\
+\end{tabbing}
+
+\subsection*{Academic Support Statements}
+\subsubsection*{Accessibility and Accommodations}
+Important: If you have any special accessibility needs (i.e. use of screen reading software, captioning, etc.), please notify your professor and the Director of Disability Services for Students (Kissinger Academic Center for Excellence, Nicholson Library; 765-641-4223) as soon as possible.\\
+ 
+\noindent If you anticipate or experience physical or academic barriers based on disability, you are encouraged to contact the Director of Disability Services for Students (Kissinger Academic Center for Excellence, Nicholson Library; 765-641-4223). To receive reasonable accommodations, you must contact Disability Services for Students, provide documentation, and request accommodations. You should also notify your course instructor during the first week of classes.
+
+\subsubsection*{Kissinger Academic Center for Excellence}
+The Kissinger Academic Center for Excellence (KACE), located on the ground floor of the Nicholson Library, provides excellent resources in all areas of study regardless of academic ability. Many students can benefit from academic support and/or sharpen their skills through studying with others. In addition, excellent students often maintain their skills by working as peer tutors. The services are available for all enrolled students at no charge. For information, call 765-641-4225.
+
+\subsubsection*{Course Schedule}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline 
+MT-1 & 1/15/20 & Intro to Mechatronics \\ 
+\hline 
+MT-2 & 1/17/20 & Programming Basics and Pushbuttons \\ 
+\hline 
+MT-3 & 1/22/20 & Work Day For Milestone 1 \\ 
+\hline 
+MT-4 & 1/24/20 & One Directional Motor Control \\ 
+\hline 
+MT-5 & 1/27/20 & H-Bridges\\ 
+\hline
+MT-6 & 1/29/20 & PWM\\ 
+\hline  
+MT-7 & 1/31/20 & Servomotor Control\\ 
+\hline  
+MT-8 & 2/3/20 & Analog Input\\ 
+\hline  
+MT-9 & 2/5/20 & Work Day for Milestone 2\\ 
+\hline 
+MT-10 & 2/7/20 & Analog Input with Optosensors and AutoCAD Intro\\ 
+\hline 
+MT-11 & 2/10/20 & AutoCAD Self Study [no class meeting]\\ 
+\hline 
+MT-12 & 2/12/20 & AutoCAD Self Study [no class meeting]\\ 
+\hline 
+MT-13 & 2/14/20 & Encoders\\ 
+\hline 
+MT-14 & 2/17/20 & Functions and Mechanical Design 1\\ 
+\hline 
+MT-15 & 2/19/20 & Mechanical Design 2\\ 
+\hline 
+MT-16 & 2/21/20 & Proximity Sensing\\ 
+\hline 
+MT-17 & 2/24/20 & Motors\\ 
+\hline 
+MT-18 & 2/26/20 & Interrupts and Timers\\ 
+\hline 
+MT-19 & 2/28/20 & Control Systems Review\\ 
+\hline 
+MT-20 & 3/2/20 & Intro to MATLAB for Controls\\ 
+\hline 
+MT-21 & 3/4/20 & Work Day for Milestone 3\\ 
+\hline 
+MT-22 & 3/6/20 & PID Control\\ 
+\hline 
+MT-23 & 3/9/20 & State Space Control Basics\\ 
+\hline 
+MT-24 & 3/11/20 & Full State Feedback\\ 
+\hline 
+MT-25 & 3/13/20 & Full State Control Design with MATLAB [no class meeting]\\ 
+\hline 
+MT-26 & 3/23/20 & Observer Design\\ 
+\hline 
+MT-27 & 3/25/20 & Combined Control\\ 
+\hline
+MT-28 & 3/27/20 & State Space Control in Mechatronic Systems\\
+\hline
+MT-29 & 3/30/20 & Printed Circuit Board Layout 1\\
+\hline
+MT-30 & 4/1/20 & PCB Layout 2\\
+\hline
+MT-31 & 4/3/20 & Gears\\
+\hline
+MT-32 & 4/6/20 & IMU and GPS\\
+\hline
+MT-33 & 4/8/20 & Work Day for Milestone 4\\
+\hline
+MT-34 & 4/15/20 & Kalman Filter\\
+\hline
+MT-35 & 4/17/20 & Computer Vision Fundamentals and Edge Detection\\
+\hline
+MT-36 & 4/20/20 & Edge Detection\\
+\hline
+MT-37 & 4/22/20 & Line Detection\\
+\hline
+MT-38 & 4/24/20 & Work Day for Final Competition\\
+\hline
+MT-39 & 4/27/20 & Final Competition Day 1\\
+\hline
+MT-40 & 4/29/20 & Work Day for Final Competition\\
+\hline
+MT-41 & 5/1/20 & Assessment and Documentation [no class meeting]\\
+\hline
+
+
+\end{tabular} 
+\end{center}
+\subsubsection*{Lab Schedule}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline 
+Lab 1 & 1/16/20 & Intro to mbed, Digital and Analog Outputs \\ 
+\hline 
+Milestone 1 & 1/23/20 & Programming the mbed \\ 
+\hline 
+Lab 2 & 1/30/20 & Motor Control \\ 
+\hline 
+Milestone 2 & 2/6/20 & Open Loop Navigation \\ 
+\hline 
+Lab 3 & 2/13/20 & Laser Cutter \\ 
+\hline 
+Lab 4 & 2/20/20 & Optical Encoder \\ 
+\hline 
+Lab 5 & 2/27/20 & Hall Effect Encoder \\ 
+\hline 
+Milestone 3 & 3/5/20 & Return and Object to Base \\ 
+\hline 
+Lab 6 & 3/12/20 & Interrupt Task Execution \\ 
+\hline 
+Lab 7 & 3/26/20 & Control Implementation\\ 
+\hline 
+Lab 8 & 4/2/20 & PCB Fabrication\\ 
+\hline 
+Milestone 4 & 4/9/20 & Sort Objects and Deliver\\ 
+\hline 
+Lab 9 & 4/16/20 & Kalman Filtering\\ 
+\hline 
+Lab 10 & 4/23/20 & Computer Vision\\ 
+\hline 
+Final Competition Day 2 & 4/30/20 & Final\\ 
+\hline
+\end{tabular} 
+\end{center}
+\end{document}
